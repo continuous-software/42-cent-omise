@@ -1,7 +1,6 @@
 'use strict';
 
 var Omise = require('../index.js').factory;
-var GatewayError = require('42-cent-base').GatewayError;
 var CreditCard = require('42-cent-model').CreditCard;
 var Prospect = require('42-cent-model').Prospect;
 var assert = require('assert');
@@ -63,7 +62,7 @@ describe('Omise adaptor', function () {
   var service;
 
   beforeEach(function () {
-    service = Omise(process.env.PUBLIC_KEY, process.env.SECRET_KEY, {testMode: true});
+    service = Omise({PUBLIC_KEY: process.env.PUBLIC_KEY, SECRET_KEY: process.env.SECRET_KEY, testMode: true});
   });
 
   describe('Service', function () {
