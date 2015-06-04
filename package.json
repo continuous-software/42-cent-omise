@@ -1,6 +1,6 @@
 {
   "name": "42-cent-omise",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "42-cent adaptor for the omise payement gateway",
   "main": "index.js",
   "scripts": {
