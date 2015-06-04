@@ -18,5 +18,5 @@ var client = new Omise({
 
 ## Gateway API
 
-This is an adaptor of [omise-node](https://github.com/omise/omise-node) for [42-cent](https://github.com/continuous-software/42-cent).
+This is an adaptor of [omise-node](https://github.com/omise/omise-node) for [42-cent](https://github.com/continuous-software/42-cent).  
 It implements the [BaseGateway](https://github.com/continuous-software/42-cent-base) API.
