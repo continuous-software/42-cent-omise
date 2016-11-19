@@ -74,7 +74,7 @@ describe('Omise adaptor', function () {
         .then(function (transaction) {
           assert(transaction.transactionId, 'transactionId should be defined');
           assert(transaction._original, 'original should be defined');
-          assert.equal(transaction._original.captured, true);
+          assert.equal(transaction._original.capture, true);
           done();
         });
     });
@@ -100,7 +100,7 @@ describe('Omise adaptor', function () {
       }, creditCards.visa, prospect).then(function (transaction) {
         assert(transaction.transactionId, 'transactionId should be defined');
         assert(transaction._original, 'original should be defined');
-        assert.equal(transaction._original.captured, false);
+        assert.equal(transaction._original.capture, false);
         done();
       });
     });
@@ -143,7 +143,7 @@ describe('Omise adaptor', function () {
         .then(function (transaction) {
           assert(transaction.transactionId, 'transactionId should be defined');
           assert(transaction._original, 'original should be defined');
-          assert.equal(transaction._original.captured, true);
+          assert.equal(transaction._original.capture, true);
           return service.refundTransaction(transaction.transactionId, {amount: 25});
         })
         .then(function (result) {
@@ -160,7 +160,7 @@ describe('Omise adaptor', function () {
         .then(function (transaction) {
           assert(transaction.transactionId, 'transactionId should be defined');
           assert(transaction._original, 'original should be defined');
-          assert.equal(transaction._original.captured, true);
+          assert.equal(transaction._original.capture, true);
           return service.refundTransaction(transaction.transactionId, {amount: 200});
         })
         .then(function (result) {
