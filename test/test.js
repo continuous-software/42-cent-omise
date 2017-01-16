@@ -76,6 +76,9 @@ describe('Omise adaptor', function () {
           assert(transaction._original, 'original should be defined');
           assert.equal(transaction._original.capture, true);
           done();
+        })
+        .catch(function (err) {
+          done(err);
         });
     });
 
@@ -97,12 +100,16 @@ describe('Omise adaptor', function () {
 
       service.authorizeTransaction({
         amount: Math.random() * 1000
-      }, creditCards.visa, prospect).then(function (transaction) {
-        assert(transaction.transactionId, 'transactionId should be defined');
-        assert(transaction._original, 'original should be defined');
-        assert.equal(transaction._original.capture, false);
-        done();
-      });
+      }, creditCards.visa, prospect)
+        .then(function (transaction) {
+          assert(transaction.transactionId, 'transactionId should be defined');
+          assert(transaction._original, 'original should be defined');
+          assert.equal(transaction._original.capture, false);
+          done();
+        })
+        .catch(function (err) {
+          done(err);
+        });
     });
 
     it('should reject the promise with a Gateway error if the remote service send an error', function (done) {
@@ -134,6 +141,9 @@ describe('Omise adaptor', function () {
           assert(result._original.amount, 10000);
           done();
         })
+        .catch(function (err) {
+          done(err);
+        });
     });
 
     it('should support partial refund', function (done) {
@@ -150,6 +160,9 @@ describe('Omise adaptor', function () {
           assert(result._original, '_original should be defined');
           assert.equal(result._original.amount, 2500);
           done();
+        })
+        .catch(function (err) {
+          done(err);
         });
     });
 
@@ -186,6 +199,9 @@ describe('Omise adaptor', function () {
           assert(result._original.transaction.status, 'voided');
           done();
         })
+        .catch(function (err) {
+          done(err);
+        });
     });
 
     xit('should reject promise if remote service returns an error', function (done) {
@@ -196,7 +212,7 @@ describe('Omise adaptor', function () {
         .catch(function (err) {
           assert.equal(err.message, 'Not Found');
           done();
-        })
+        });
     });
 
     it('should create a customer profile', function (done) {
@@ -221,7 +237,7 @@ describe('Omise adaptor', function () {
         })
         .then(function (result) {
           assert(result.transactionId);
-          done()
+          done();
         })
         .catch(function (err) {
           done(err);
