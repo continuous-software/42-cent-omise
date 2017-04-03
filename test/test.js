@@ -69,7 +69,7 @@ describe('Omise adaptor', function () {
 
     it('should submit a transaction', function (done) {
       service.submitTransaction({
-        amount: Math.random() * 2000
+        amount: casual.double(42)
       }, creditCards.visa, prospect)
         .then(function (transaction) {
           assert(transaction.transactionId, 'transactionId should be defined');
@@ -84,7 +84,7 @@ describe('Omise adaptor', function () {
 
     it('should reject with a GatewayError if the gateway sends an error', function (done) {
       service.submitTransaction({
-        amount: Math.random() * 2000
+        amount: casual.double(42)
       }, assign({}, creditCards.visa, {creditCardNumber: '4000000000000010', expirationYear: '2009'}), prospect)
         .then(function (transaction) {
           throw new Error('should not get here');
@@ -99,7 +99,7 @@ describe('Omise adaptor', function () {
     it('should authorize a transaction', function (done) {
 
       service.authorizeTransaction({
-        amount: Math.random() * 2000
+        amount: casual.double(42)
       }, creditCards.visa, prospect)
         .then(function (transaction) {
           assert(transaction.transactionId, 'transactionId should be defined');
@@ -189,7 +189,7 @@ describe('Omise adaptor', function () {
     // todo void not implemented by Omise
     xit('should void a transaction', function (done) {
       service.authorizeTransaction({
-        amount: Math.random() * 2000
+        amount: casual.double(42)
       }, creditCards.visa, prospect)
         .then(function (transaction) {
           return service.voidTransaction(transaction.transactionId, {});
@@ -233,7 +233,7 @@ describe('Omise adaptor', function () {
           assert(result.profileId, ' profileId Should be defined');
           assert(result._original, '_original should be defined');
           prospect.profileId = result.profileId;
-          return service.chargeCustomer({amount: Math.random() * 2000}, prospect);
+          return service.chargeCustomer({amount: casual.double(42)}, prospect);
         })
         .then(function (result) {
           assert(result.transactionId);
