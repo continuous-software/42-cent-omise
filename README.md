@@ -1,10 +1,9 @@
-[![Build Status](https://travis-ci.org/continuous-software/42-cent-omise.svg?branch=master)](https://travis-ci.org/continuous-software/42-cent-omise)
+[![Greenkeeper badge](https://badges.greenkeeper.io/continuous-software/42-cent-omise.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/continuous-software/42-cent-omise.svg?branch=master)](https://travis-ci.org/continuous-software/42-cent-omise)
 
-![42-cent-omise](http://s10.postimg.org/jlg876lwl/rsz_1cb_28e6ed48002ecd5c39b9fd21d236da17.jpg)
+<img src="https://image.ibb.co/cjCoCy/omise_logo.jpg" alt="42-cent-omise" height="200"/>
 
 ## Installation ##
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/continuous-software/42-cent-omise.svg)](https://greenkeeper.io/)
 
     $ npm install -s 42-cent-omise
 
