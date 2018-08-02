@@ -1,4 +1,4 @@
-[![Greenkeeper badge](https://badges.greenkeeper.io/continuous-software/42-cent-omise.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/continuous-software/42-cent-omise.svg?branch=master)](https://travis-ci.org/continuous-software/42-cent-omise)
+[![Greenkeeper badge](https://badges.greenkeeper.io/continuous-software/42-cent-omise.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/continuous-software/42-cent-omise.svg?branch=master)](https://travis-ci.org/continuous-software/42-cent-omise) [![GuardRails badge](https://badges.production.guardrails.io/continuous-software/42-cent-omise.svg)](https://www.guardrails.io)
 
 <img src="https://image.ibb.co/cjCoCy/omise_logo.jpg" alt="42-cent-omise" height="200"/>
 
